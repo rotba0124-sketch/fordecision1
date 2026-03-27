@@ -1,0 +1,13 @@
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 설정
+.vscode/
+.idea/
+
+# Vercel 로컬 설정
+.vercel/
+
+# 로그
+*.log
