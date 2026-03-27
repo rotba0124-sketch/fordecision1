@@ -578,6 +578,37 @@ section {
   color: rgba(255,255,255,0.85);
 }
 
+/* ===== CTA BUTTON WITH INLINE COPY ===== */
+.cta-btn-with-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-copy-inline {
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.65);
+  border-radius: 6px;
+}
+
+.btn-copy-inline:hover {
+  background: rgba(255,255,255,0.22);
+  color: #FFFFFF;
+}
+
+.cta-section .btn-copy-inline {
+  background: rgba(0,0,0,0.15);
+  color: rgba(255,255,255,0.7);
+}
+
+.cta-section .btn-copy-inline:hover {
+  background: rgba(0,0,0,0.25);
+  color: #FFFFFF;
+}
+
 /* ===== FOOTER ===== */
 .site-footer {
   background: #060E1C;
@@ -837,7 +868,13 @@ section {
       </p>
       <div class="cta-offer-badge">초기 파트너 3곳 한정 · 3개월 무료 + 맞춤형 구축</div>
       <div class="cta-buttons">
-        <a href="mailto:hello@fordecision.app?subject=디자인%20파트너십%20문의&body=안녕하세요%2C%20포디시전%20팀입니다.%0A%0A디자인%20파트너십에%20관심이%20있습니다.%20자세한%20내용을%20알고%20싶습니다." class="btn btn-white btn-lg" onclick="handleMailto(event, this)">디자인 파트너 신청하기</a>
+        <div class="cta-btn-with-copy">
+          <a href="mailto:hello@fordecision.app?subject=디자인%20파트너십%20문의&body=안녕하세요%2C%20포디시전%20팀입니다.%0A%0A디자인%20파트너십에%20관심이%20있습니다.%20자세한%20내용을%20알고%20싶습니다." class="btn btn-white btn-lg" onclick="handleMailto(event, this)">디자인 파트너 신청하기</a>
+          <button class="btn-copy btn-copy-inline" onclick="copyEmail(this)" title="이메일 주소 복사">
+            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            이메일 복사
+          </button>
+        </div>
         <a href="one-pager.pdf" class="btn btn-outline-white btn-lg" target="_blank" rel="noopener">1페이지 소개서 받기</a>
       </div>
       <p class="cta-contact">또는 이메일로 문의하세요: <a href="mailto:hello@fordecision.app">hello@fordecision.app</a></p>
